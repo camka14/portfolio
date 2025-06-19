@@ -1,25 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
+import InteractiveHeader from './components/InteractiveHeader';
 
-const PersonalWebsite = () => {
+export default function PersonalWebsite() {
   return (
     <div className="font-sans leading-relaxed text-gray-800">
-      {/* Header Section */}
-      <header className="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav className="flex flex-col md:flex-row justify-between items-center p-4 md:px-8 gap-4 md:gap-0">
-          <div className="nav-brand">
-            <h2 className="text-xl font-bold">Samuel Razumovskiy</h2>
-          </div>
-          <ul className="flex list-none gap-4 md:gap-8">
-            <li><a href="#about" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">About</a></li>
-            <li><a href="#app" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">App</a></li>
-            <li><a href="#sdk" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">SDK Work</a></li>
-            <li><a href="#contact" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+      {/* Interactive Header Component */}
+      <InteractiveHeader />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white pt-32 pb-20 px-8 mt-16">
+      <section className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white pt-32 pb-20 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Samuel Razumovskiy</h1>
@@ -31,7 +21,13 @@ const PersonalWebsite = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <img src="/path-to-your-photo.jpg" alt="Samuel Razumovskiy" className="w-72 h-72 rounded-full object-cover border-4 border-white/20" />
+            <Image 
+              src="/images/profile/profile.jpg" 
+              alt="Samuel Razumovskiy" 
+              width={288}
+              height={288}
+              className="rounded-full object-cover border-4 border-white/20" 
+            />
           </div>
         </div>
       </section>
@@ -43,9 +39,9 @@ const PersonalWebsite = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-lg mb-6">
-                I'm a passionate developer specializing in Kotlin Multiplatform development and 
+                {`I'm a passionate developer specializing in Kotlin Multiplatform development and 
                 open source contributions. My work focuses on creating efficient cross-platform 
-                solutions and expanding the Appwrite ecosystem through SDK development.
+                solutions and expanding the Appwrite ecosystem through SDK development.`}
               </p>
             </div>
             <div>
@@ -107,19 +103,39 @@ const PersonalWebsite = () => {
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
                 <div className="text-center">
-                  <img src="/path-to-android-screenshot.png" alt="Android App Screenshot" className="w-full rounded-lg shadow-lg" />
+                  <Image 
+                    src="/images/screenshots/android-screenshot.png" 
+                    alt="Android App Screenshot" 
+                    width={288}
+                    height={288}
+                    className="w-full rounded-lg shadow-lg" 
+                  />
                   <p className="mt-2 font-medium">Android Version</p>
                 </div>
                 <div className="text-center">
-                  <img src="/path-to-ios-screenshot.png" alt="iOS App Screenshot" className="w-full rounded-lg shadow-lg" />
+                  <Image 
+                    src="/images/screenshots/ios-screenshot.png" 
+                    alt="IOS App Screenshot" 
+                    width={288}
+                    height={288}
+                    className="w-full rounded-lg shadow-lg" 
+                  />
                   <p className="mt-2 font-medium">iOS Version</p>
                 </div>
                 <div className="text-center md:col-span-2 lg:col-span-1 xl:col-span-2">
-                  <video controls poster="/path-to-video-thumbnail.png" className="w-full rounded-lg shadow-lg">
-                    <source src="/path-to-app-demo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <p className="mt-2 font-medium">App Demo Video</p>
+                  <div className="max-w-xs mx-auto">
+                    <div className="relative bg-black rounded-3xl p-2 shadow-2xl">
+                      <video 
+                        controls 
+                        className="w-full rounded-2xl"
+                        style={{ aspectRatio: '9/19.5' }}
+                      >
+                        <source src="/videos/demo.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <p className="mt-4 font-medium">Kotlin Multiplatform App Demo</p>
                 </div>
               </div>
             </div>
@@ -143,10 +159,10 @@ const PersonalWebsite = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold mb-3">SDK Project: "sdk-for-kmp"</h4>
-                <p className="mb-4">
+                <h4 className="text-xl font-semibold mb-3">{`SDK Project: "sdk-for-kmp"`}</h4>
+                <p className="mb-4">{`
                   An unofficial but significant contribution to the Appwrite ecosystem, 
-                  providing Kotlin Multiplatform support for Appwrite's backend services.
+                  providing Kotlin Multiplatform support for Appwrite's backend services.`}
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>GPL-3.0 Licensed</li>
@@ -169,7 +185,7 @@ const PersonalWebsite = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold mb-3">Impact & Benefits</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Expands Appwrite's platform support</li>
+                  <li>{`Expands Appwrite's platform support`}</li>
                   <li>Benefits the Kotlin developer community</li>
                   <li>Enables cross-platform backend integration</li>
                   <li>Reduces development time for Kotlin projects</li>
@@ -197,7 +213,7 @@ const PersonalWebsite = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-4">{`Let's Connect`}</h3>
               <p className="text-lg mb-6">
                 Interested in collaboration or discussing Kotlin Multiplatform development? 
                 Feel free to reach out!
@@ -248,5 +264,3 @@ const PersonalWebsite = () => {
     </div>
   );
 };
-
-export default PersonalWebsite;
