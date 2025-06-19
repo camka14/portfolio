@@ -141,6 +141,7 @@ export default function PersonalWebsite() {
                       <video
                         autoPlay
                         muted
+                        playsInline 
                         controls
                         className="w-full"
                         style={{
