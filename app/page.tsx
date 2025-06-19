@@ -46,7 +46,7 @@ export default function PersonalWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-lg mb-6">
-                {`I'm a passionate developer currently working with Kotlin Multiplatform and 
+                {`I'm a software engineer currently working with Kotlin Multiplatform and 
                 making open source contributions. My work focuses on creating efficient cross-platform 
                 solutions and expanding the Appwrite ecosystem through SDK development.`}
               </p>
