@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import InteractiveHeader from './components/InteractiveHeader';
+import ContactForm from './components/ContactForm';
 
 export default function PersonalWebsite() {
   return (
@@ -39,8 +40,8 @@ export default function PersonalWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-lg mb-6">
-                {`I'm a passionate developer specializing in Kotlin Multiplatform development and 
-                open source contributions. My work focuses on creating efficient cross-platform 
+                {`I'm a passionate developer currently working with Kotlin Multiplatform and 
+                making open source contributions. My work focuses on creating efficient cross-platform 
                 solutions and expanding the Appwrite ecosystem through SDK development.`}
               </p>
             </div>
@@ -69,7 +70,8 @@ export default function PersonalWebsite() {
               <p className="text-lg mb-6">
                 A cross-platform mobile application built with Kotlin Multiplatform, 
                 demonstrating modern mobile development principles with shared code 
-                architecture between Android and iOS platforms.
+                architecture between Android and iOS platforms. It is currently in 
+                closed testing.
               </p>
               
               <div className="mb-6">
@@ -79,6 +81,11 @@ export default function PersonalWebsite() {
                   <li>Compose Multiplatform for shared UI components</li>
                   <li>Clean architecture with commonMain and platform-specific modules</li>
                   <li>Modern Kotlin ecosystem integration</li>
+                  <li>Local Database Caching</li>
+                  <li>Push Notifications</li>
+                  <li>Secure Authentication</li>
+                  <li>Real-time Data Synchronization</li>
+                  <li>Payment Handling with Stripe - Work in Progress</li>
                 </ul>
               </div>
 
@@ -89,6 +96,7 @@ export default function PersonalWebsite() {
                   <li>Compose Multiplatform</li>
                   <li>SwiftUI (iOS specific)</li>
                   <li>Android Jetpack Compose</li>
+                  <li>Appwrite for backend services</li>
                 </ul>
               </div>
 
@@ -96,7 +104,6 @@ export default function PersonalWebsite() {
                 <a href="https://github.com/camka14/mvp-app" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-blue-600 text-white hover:bg-blue-700">
                   View Source Code
                 </a>
-                <a href="#demo" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white">Live Demo</a>
               </div>
             </div>
 
@@ -125,12 +132,17 @@ export default function PersonalWebsite() {
                 <div className="text-center md:col-span-2 lg:col-span-1 xl:col-span-2">
                   <div className="max-w-xs mx-auto">
                     <div className="relative bg-black rounded-3xl p-2 shadow-2xl">
-                      <video 
-                        controls 
-                        className="w-full rounded-2xl"
-                        style={{ aspectRatio: '9/19.5' }}
+                      <video
+                        autoPlay
+                        muted
+                        controls
+                        className="w-full"
+                        style={{
+                          aspectRatio: '84/187',
+                          borderRadius: '16px'
+                        }}
                       >
-                        <source src="/videos/demo.mp4" type="video/mp4" />
+                        <source src="/videos/website_demo.webm" type="video/webm" />
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -161,7 +173,7 @@ export default function PersonalWebsite() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold mb-3">{`SDK Project: "sdk-for-kmp"`}</h4>
                 <p className="mb-4">{`
-                  An unofficial but significant contribution to the Appwrite ecosystem, 
+                  Curretnly an unofficial contribution to the Appwrite ecosystem, 
                   providing Kotlin Multiplatform support for Appwrite's backend services.`}
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-sm">
@@ -178,7 +190,7 @@ export default function PersonalWebsite() {
                   <li><strong>Kotlinx Serialization:</strong> JSON handling and data serialization</li>
                   <li><strong>Ktor:</strong> HTTP client functionality for API communication</li>
                   <li><strong>Kotlinx Coroutines:</strong> Asynchronous operations management</li>
-                  <li><strong>Kotlinx DateTime:</strong> Date and time operations</li>
+                  <li><strong>Authentication Handling:</strong> Secure session management and token-based auth</li>
                 </ul>
               </div>
 
@@ -198,7 +210,7 @@ export default function PersonalWebsite() {
                 <a href="https://github.com/camka14/sdk-for-kmp" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-blue-600 text-white hover:bg-blue-700">
                   View SDK Repository
                 </a>
-                <a href="#pull-request-link" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white">
+                <a href="https://github.com/appwrite/sdk-generator/pull/1040" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white">
                   View Pull Request
                 </a>
               </div>
@@ -224,27 +236,15 @@ export default function PersonalWebsite() {
                 </div>
                 <div>
                   <strong>GitHub:</strong> 
-                  <a href="https://github.com/camka14" className="text-blue-600 hover:text-blue-800 ml-2">github.com/camka14</a>
-                </div>
-                <div>
-                  <strong>Location:</strong> [Your Location]
+                  <a href="https://github.com/camka14" className="text-blue-600 hover:text-blue-800 ml-2">
+                    github.com/camka14
+                  </a>
                 </div>
               </div>
             </div>
 
             <div>
-              <form className="space-y-4">
-                <div>
-                  <input type="text" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                </div>
-                <div>
-                  <input type="email" placeholder="Your Email" required className="w-full p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                </div>
-                <div>
-                  <textarea placeholder="Your Message" rows={5} required className="w-full p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                </div>
-                <button type="submit" className="w-full py-3 px-6 rounded-md font-semibold transition-all duration-300 bg-blue-600 text-white hover:bg-blue-700">Send Message</button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -256,8 +256,7 @@ export default function PersonalWebsite() {
           <p className="mb-4">&copy; 2025 Samuel Razumovskiy. Built with React and Next.js</p>
           <div className="flex justify-center gap-6">
             <a href="https://github.com/camka14" className="text-gray-300 hover:text-white transition-colors">GitHub</a>
-            <a href="#linkedin" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#twitter" className="text-gray-300 hover:text-white transition-colors">Twitter</a>
+            <a href="https://www.linkedin.com/in/samuelraz/" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a>
           </div>
         </div>
       </footer>
