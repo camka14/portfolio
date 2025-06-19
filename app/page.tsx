@@ -141,8 +141,8 @@ export default function PersonalWebsite() {
                       <video
                         autoPlay
                         muted
+                        loop
                         playsInline 
-                        controls
                         className="w-full"
                         style={{
                           aspectRatio: '84/187',
