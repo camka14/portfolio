@@ -2,6 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import InteractiveHeader from './components/InteractiveHeader';
 import ContactForm from './components/ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Samuel Razumovskiy - Kotlin Developer', // Change this line
+  description: 'Personal website of Samuel Razumovskiy, Kotlin Multiplatform developer and Appwrite contributor',
+}
 
 export default function PersonalWebsite() {
   return (
