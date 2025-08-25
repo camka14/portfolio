@@ -20,20 +20,20 @@ export default function PersonalWebsite() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="hero-text">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Samuel Razumovskiy</h1>
-            <h3 className="text-xl md:text-2xl mb-4">Kotlin Multiplatform Developer & Open Source Contributor</h3>
-            <p className="text-lg mb-8">Building cross-platform solutions and contributing to the Appwrite ecosystem</p>
+            <h3 className="text-xl md:text-2xl mb-4">C#/.NET/Kotlin Multiplatform Developer & Open Source Contributor</h3>
+            <p className="text-lg mb-8">Building cross-platform solutions, hardware testing interfaces, and contributing to the Appwrite ecosystem</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#app" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-blue-600 text-white hover:bg-blue-700">View My App</a>
               <a href="https://github.com/camka14" className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple-600">GitHub Profile</a>
             </div>
           </div>
           <div className="flex justify-center">
-            <Image 
-              src="/images/profile/profile.jpg" 
-              alt="Samuel Razumovskiy" 
+            <Image
+              src="/images/profile/profile.jpg"
+              alt="Samuel Razumovskiy"
               width={288}
               height={288}
-              className="rounded-full object-cover border-4 border-white/20" 
+              className="rounded-full object-cover border-4 border-white/20"
             />
           </div>
         </div>
@@ -47,8 +47,10 @@ export default function PersonalWebsite() {
             <div>
               <p className="text-lg mb-6">
                 {`I'm a software engineer currently working with Kotlin Multiplatform and 
-                making open source contributions. My work focuses on creating efficient cross-platform 
-                solutions and expanding the Appwrite ecosystem through SDK development.`}
+                making open source contributions. I previously worked with C#/.NET to interface 
+                with pieces of hardware as well as testing interfaces. Currently my work focuses on 
+                creating efficient cross-platform solutions and expanding the Appwrite ecosystem 
+                through SDK development.`}
               </p>
             </div>
             <div>
@@ -58,6 +60,9 @@ export default function PersonalWebsite() {
                 <li>Android & iOS Development</li>
                 <li>Compose Multiplatform</li>
                 <li>Next.js & React</li>
+                <li>C#/.NET</li>
+                <li>RESTful APIs</li>
+                <li>CICD</li>
                 <li>Appwrite Integration</li>
                 <li>Open Source Contribution</li>
               </ul>
@@ -74,12 +79,12 @@ export default function PersonalWebsite() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Kotlin Multiplatform MVP Application</h3>
               <p className="text-lg mb-6">
-                A cross-platform mobile application built with Kotlin Multiplatform, 
-                demonstrating modern mobile development principles with shared code 
-                architecture between Android and iOS platforms. It is currently in 
+                A cross-platform mobile application built with Kotlin Multiplatform,
+                demonstrating modern mobile development principles with shared code
+                architecture between Android and iOS platforms. It is currently in
                 closed testing.
               </p>
-              
+
               <div className="mb-6">
                 <h4 className="text-xl font-semibold mb-3">Key Features:</h4>
                 <ul className="list-disc list-inside space-y-2">
@@ -91,7 +96,7 @@ export default function PersonalWebsite() {
                   <li>Push Notifications</li>
                   <li>Secure Authentication</li>
                   <li>Real-time Data Synchronization</li>
-                  <li>Payment Handling with Stripe - Work in Progress</li>
+                  <li>Payment Handling with Stripe</li>
                 </ul>
               </div>
 
@@ -111,27 +116,60 @@ export default function PersonalWebsite() {
                   View Source Code
                 </a>
               </div>
+              <h2 className="text-2xl font-semibold mb-6">Download The App</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.razumly.mvp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Image
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play"
+                    width={200}
+                    height={64}
+                    className="h-16 w-auto"
+                    priority
+                  />
+                </a>
+                <a
+                  href="https://apps.apple.com/app/razumly-mvp/id123456789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Image
+                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store"
+                    width={200}
+                    height={64}
+                    className="h-16 w-auto"
+                    priority
+                  />
+                </a>
+              </div>
             </div>
 
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
                 <div className="text-center">
-                  <Image 
-                    src="/images/screenshots/android-screenshot.png" 
-                    alt="Android App Screenshot" 
+                  <Image
+                    src="/images/screenshots/android-screenshot.png"
+                    alt="Android App Screenshot"
                     width={288}
                     height={288}
-                    className="w-full rounded-lg shadow-lg" 
+                    className="w-full rounded-lg shadow-lg"
                   />
                   <p className="mt-2 font-medium">Android Version</p>
                 </div>
                 <div className="text-center">
-                  <Image 
-                    src="/images/screenshots/ios-screenshot.png" 
-                    alt="IOS App Screenshot" 
+                  <Image
+                    src="/images/screenshots/ios-screenshot.png"
+                    alt="IOS App Screenshot"
                     width={288}
                     height={288}
-                    className="w-full rounded-lg shadow-lg" 
+                    className="w-full rounded-lg shadow-lg"
                   />
                   <p className="mt-2 font-medium">iOS Version</p>
                 </div>
@@ -142,7 +180,7 @@ export default function PersonalWebsite() {
                         autoPlay
                         muted
                         loop
-                        playsInline 
+                        playsInline
                         className="w-full"
                         style={{
                           aspectRatio: '84/187',
@@ -170,8 +208,8 @@ export default function PersonalWebsite() {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Kotlin Multiplatform SDK for Appwrite</h3>
               <p className="text-lg max-w-4xl mx-auto">
-                Contributing to the Appwrite ecosystem by developing and maintaining 
-                the Kotlin Multiplatform SDK, enabling developers to use Appwrite 
+                Contributing to the Appwrite ecosystem by developing and maintaining
+                the Kotlin Multiplatform SDK, enabling developers to use Appwrite
                 services across multiple Kotlin platforms.
               </p>
             </div>
@@ -234,7 +272,7 @@ export default function PersonalWebsite() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">{`Let's Connect`}</h3>
               <p className="text-lg mb-6">
-                Interested in collaboration or discussing Kotlin Multiplatform development? 
+                Interested in collaboration or discussing Kotlin Multiplatform development?
                 Feel free to reach out!
               </p>
               <div className="space-y-3">
@@ -242,7 +280,7 @@ export default function PersonalWebsite() {
                   <strong>Email:</strong> samuel.razumovskiy@gmail.com
                 </div>
                 <div>
-                  <strong>GitHub:</strong> 
+                  <strong>GitHub:</strong>
                   <a href="https://github.com/camka14" className="text-blue-600 hover:text-blue-800 ml-2">
                     github.com/camka14
                   </a>
