@@ -39,6 +39,79 @@ export default function PersonalWebsite() {
         </div>
       </section>
 
+      {/* Razumly MVP Web Platform */}
+      <section id="razumly-web" className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-5">
+            <h2 className="text-3xl font-bold">Razumly MVP — Multi-sport Web Platform</h2>
+            <p className="text-lg text-gray-700">
+              A Next.js + Appwrite web app for organizing pickup games, leagues, and tournaments across any sport.
+              Handles scheduling, team management, payments, and chat in one place.
+            </p>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Stack</h4>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>Next.js 14 (App Router) + TypeScript</li>
+                <li>Mantine UI + Emotion styling</li>
+                <li>Appwrite: Account, TablesDB, Storage, Functions</li>
+                <li>Stripe payments via Appwrite Functions</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Highlights</h4>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>Event scheduling with field/court slots</li>
+                <li>Team and roster management with real-time chat</li>
+                <li>Image uploads and rich OG previews for sharing</li>
+              </ul>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://mvp.razumly.com"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-blue-600 text-white hover:bg-blue-700"
+              >
+                View live web app
+              </a>
+              <a
+                href="https://github.com/camka14/mvp-site"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block py-3 px-6 rounded-md no-underline font-semibold transition-all duration-300 bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white"
+              >
+                View web app source
+              </a>
+            </div>
+          </div>
+
+          <div className="group relative overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white">
+            <a href="https://mvp.razumly.com" target="_blank" rel="noreferrer" className="block">
+              <div className="relative">
+                <Image
+                  src="https://mvp.razumly.com/opengraph-image"
+                  alt="Preview of the Razumly MVP multi-sport web platform"
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
+                  <div>
+                    <p className="text-sm uppercase tracking-wide text-white/80">Live preview</p>
+                    <p className="text-lg font-semibold">mvp.razumly.com</p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-sm font-medium">
+                    Open →
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-5">
