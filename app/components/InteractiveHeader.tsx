@@ -42,13 +42,8 @@ export default function InteractiveHeader() {
             </a>
           </li>
           <li>
-            <a href="#app" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">
-              App
-            </a>
-          </li>
-          <li>
-            <a href="#sdk" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">
-              SDK Work
+            <a href="#projects" className="no-underline text-gray-800 font-medium transition-colors duration-300 hover:text-blue-600">
+              Projects
             </a>
           </li>
           <li>
