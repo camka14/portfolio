@@ -54,13 +54,24 @@ const mobileHighlights = [
 function Marquee() {
   return (
     <div className="relative overflow-hidden border-y border-zinc-900/10 bg-white/70 py-5 dark:border-white/10 dark:bg-zinc-950/70">
-      <div className="marquee-track flex w-max gap-10 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-        {[...craftItems, ...craftItems].map((item, index) => (
-          <span key={`${item}-${index}`} className="whitespace-nowrap">
-            {item}
-          </span>
+      <div
+        aria-hidden="true"
+        className="marquee-track flex w-max text-sm font-medium text-zinc-600 dark:text-zinc-300"
+      >
+        {Array.from({ length: 3 }).map((_, groupIndex) => (
+          <div
+            key={groupIndex}
+            className="marquee-list flex shrink-0 items-center gap-10 pr-10"
+          >
+            {craftItems.map((item) => (
+              <span key={`${item}-${groupIndex}`} className="whitespace-nowrap">
+                {item}
+              </span>
+            ))}
+          </div>
         ))}
       </div>
+      <span className="sr-only">{craftItems.join(", ")}</span>
     </div>
   );
 }

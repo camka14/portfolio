@@ -46,12 +46,14 @@ video {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-33.333333%, 0, 0);
   }
 }
 
 .marquee-track {
-  animation: marquee 34s linear infinite;
+  animation: marquee 32s linear infinite;
+  animation-delay: -11s;
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
