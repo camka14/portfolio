@@ -43,16 +43,16 @@ video {
 
 @keyframes marquee {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(calc(var(--marquee-list-width, 1000px) * -1), 0, 0);
   }
   to {
-    transform: translate3d(-33.333333%, 0, 0);
+    transform: translate3d(calc(var(--marquee-list-width, 1000px) * -2), 0, 0);
   }
 }
 
 .marquee-track {
-  animation: marquee 32s linear infinite;
-  animation-delay: -11s;
+  animation: marquee var(--marquee-duration, 32s) linear infinite;
+  animation-delay: calc(var(--marquee-duration, 32s) / -3);
   will-change: transform;
 }
 

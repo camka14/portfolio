@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ContactForm from "./components/ContactForm";
 import InteractiveHeader from "./components/InteractiveHeader";
 import PortfolioMotion from "./components/PortfolioMotion";
+import SkillsMarquee from "./components/SkillsMarquee";
 
 export const metadata: Metadata = {
   title: "Samuel Razumovskiy | Product Builder",
@@ -50,31 +51,6 @@ const mobileHighlights = [
   "Mobile screens for event search, event detail, event create, organization detail, team management, match detail, chat, and profile schedule.",
   "Repository layer for events, teams, fields, billing, matches, users, images, sports, push notifications, and app updates.",
 ];
-
-function Marquee() {
-  return (
-    <div className="relative overflow-hidden border-y border-zinc-900/10 bg-white/70 py-5 dark:border-white/10 dark:bg-zinc-950/70">
-      <div
-        aria-hidden="true"
-        className="marquee-track flex w-max text-sm font-medium text-zinc-600 dark:text-zinc-300"
-      >
-        {Array.from({ length: 3 }).map((_, groupIndex) => (
-          <div
-            key={groupIndex}
-            className="marquee-list flex shrink-0 items-center gap-10 pr-10"
-          >
-            {craftItems.map((item) => (
-              <span key={`${item}-${groupIndex}`} className="whitespace-nowrap">
-                {item}
-              </span>
-            ))}
-          </div>
-        ))}
-      </div>
-      <span className="sr-only">{craftItems.join(", ")}</span>
-    </div>
-  );
-}
 
 export default function PersonalWebsite() {
   return (
@@ -146,7 +122,7 @@ export default function PersonalWebsite() {
             </div>
           </section>
 
-          <Marquee />
+          <SkillsMarquee items={craftItems} />
 
           <section id="projects" className="px-5 py-24 sm:px-8 md:py-32">
             <div className="mx-auto max-w-7xl">
