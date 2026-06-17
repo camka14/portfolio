@@ -150,8 +150,8 @@ export default function PersonalWebsite() {
                 </p>
               </div>
 
-              <div className="mt-14 grid grid-flow-dense grid-cols-1 gap-5 lg:grid-cols-6 lg:grid-rows-2">
-                <article className="group motion-image overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-white p-5 shadow-[0_24px_80px_rgba(39,39,42,0.12)] dark:border-white/10 dark:bg-white/10 lg:col-span-3 lg:row-span-2">
+              <div className="mt-14 grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
+                <article className="group motion-image overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-white p-5 shadow-[0_24px_80px_rgba(39,39,42,0.12)] dark:border-white/10 dark:bg-white/10">
                   <div className="overflow-hidden rounded-[1rem] bg-zinc-100 dark:bg-zinc-900">
                     <Image
                       src="/images/projects/org_home_web.png"
@@ -200,89 +200,93 @@ export default function PersonalWebsite() {
                   </div>
                 </article>
 
-                <article className="group motion-image overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-[#e9f2d8] p-5 dark:border-white/10 dark:bg-lime-950/30 lg:col-span-3">
-                  <div className="grid gap-5 sm:grid-cols-[0.78fr_1.22fr] sm:items-center">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="overflow-hidden rounded-[1rem] bg-white p-2 dark:bg-zinc-900">
-                        <Image
-                          src="/images/projects/discover_screen_mobile.png"
-                          alt="BracketIQ mobile discover screen"
-                          width={1280}
-                          height={2856}
-                          className="w-full rounded-[0.75rem] transition duration-700 ease-out group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="overflow-hidden rounded-[1rem] bg-white p-2 dark:bg-zinc-900">
-                        <Image
-                          src="/images/projects/schedule_mobile.png"
-                          alt="BracketIQ mobile schedule screen"
-                          width={1280}
-                          height={2856}
-                          className="w-full rounded-[0.75rem] transition duration-700 ease-out group-hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold">BracketIQ Mobile</h3>
-                      <p className="mt-3 text-base leading-7 text-zinc-700 dark:text-zinc-300">
-                        mvp-app is the Kotlin Multiplatform companion for BracketIQ,
-                        sharing Compose Multiplatform code across Android and iOS.
-                      </p>
-                      <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-                        {mobileHighlights.map((item) => (
-                          <li key={item} className="flex gap-3">
-                            <span
-                              aria-hidden="true"
-                              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-950 dark:bg-lime-300"
-                            />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="mt-5 flex flex-wrap gap-3">
-                        <a
-                          href="https://github.com/camka14/mvp-app"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex min-h-11 items-center justify-center rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 active:translate-y-px dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
-                        >
-                          View Source
-                        </a>
-                        <a
-                          href="https://play.google.com/store/apps/details?id=com.razumly.mvp"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex min-h-11 items-center"
-                        >
+                <div className="grid items-start gap-5">
+                  <article className="group motion-image overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-[#e9f2d8] p-5 dark:border-white/10 dark:bg-lime-950/30">
+                    <div className="grid gap-5 sm:grid-cols-[0.78fr_1.22fr] sm:items-center">
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="overflow-hidden rounded-[1rem] bg-white p-2 dark:bg-zinc-900">
                           <Image
-                            src="/images/buttons/googlePlay.svg"
-                            alt="Get it on Google Play"
-                            width={156}
-                            height={46}
-                            className="h-11 w-auto"
+                            src="/images/projects/discover_screen_mobile.png"
+                            alt="BracketIQ mobile discover screen"
+                            width={1280}
+                            height={2856}
+                            className="w-full rounded-[0.75rem] transition duration-700 ease-out group-hover:scale-105"
                           />
-                        </a>
+                        </div>
+                        <div className="overflow-hidden rounded-[1rem] bg-white p-2 dark:bg-zinc-900">
+                          <Image
+                            src="/images/projects/schedule_mobile.png"
+                            alt="BracketIQ mobile schedule screen"
+                            width={1280}
+                            height={2856}
+                            className="w-full rounded-[0.75rem] transition duration-700 ease-out group-hover:scale-105"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-semibold">BracketIQ Mobile</h3>
+                        <p className="mt-3 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+                          mvp-app is the Kotlin Multiplatform companion for BracketIQ,
+                          sharing Compose Multiplatform code across Android and iOS.
+                        </p>
+                        <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                          {mobileHighlights.map((item) => (
+                            <li key={item} className="flex gap-3">
+                              <span
+                                aria-hidden="true"
+                                className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-950 dark:bg-lime-300"
+                              />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-5 flex flex-wrap gap-3">
+                          <a
+                            href="https://github.com/camka14/mvp-app"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex min-h-11 items-center justify-center rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 active:translate-y-px dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+                          >
+                            View Source
+                          </a>
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.razumly.mvp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-11 items-center"
+                          >
+                            <Image
+                              src="/images/buttons/googlePlay.svg"
+                              alt="Get it on Google Play"
+                              width={156}
+                              height={46}
+                              className="h-11 w-auto"
+                            />
+                          </a>
+                        </div>
                       </div>
                     </div>
+                  </article>
+
+                  <div className="grid items-start gap-5 sm:grid-cols-[2fr_1fr]">
+                    <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-zinc-950 p-6 text-white dark:border-white/10">
+                      <h3 className="text-2xl font-semibold">mvp-site</h3>
+                      <p className="mt-3 text-base leading-7 text-zinc-300">
+                        Next.js App Router app with Mantine UI, Prisma, Postgres,
+                        Stripe, file routes, organization pages, public embeds, and
+                        event scheduling surfaces.
+                      </p>
+                    </article>
+
+                    <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-white p-6 dark:border-white/10 dark:bg-white/10">
+                      <h3 className="text-2xl font-semibold">mvp-app</h3>
+                      <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                        KMP project with shared composeApp code, Android target, iOS
+                        framework targets, and an iosApp entry point.
+                      </p>
+                    </article>
                   </div>
-                </article>
-
-                <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-zinc-950 p-6 text-white dark:border-white/10 lg:col-span-2">
-                  <h3 className="text-2xl font-semibold">mvp-site</h3>
-                  <p className="mt-3 text-base leading-7 text-zinc-300">
-                    Next.js App Router app with Mantine UI, Prisma, Postgres,
-                    Stripe, file routes, organization pages, public embeds, and
-                    event scheduling surfaces.
-                  </p>
-                </article>
-
-                <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-white p-6 dark:border-white/10 dark:bg-white/10 lg:col-span-1">
-                  <h3 className="text-2xl font-semibold">mvp-app</h3>
-                  <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-                    KMP project with shared composeApp code, Android target, iOS
-                    framework targets, and an iosApp entry point.
-                  </p>
-                </article>
+                </div>
               </div>
             </div>
           </section>
