@@ -57,10 +57,9 @@ export default function PortfolioMotion({ children }: PortfolioMotionProps) {
       gsap.utils.toArray<HTMLElement>(".motion-image").forEach((element) => {
         gsap.fromTo(
           element,
-          { scale: 0.94, opacity: 0.72 },
+          { scale: 0.96 },
           {
             scale: 1,
-            opacity: 1,
             ease: "none",
             scrollTrigger: {
               trigger: element,
@@ -70,18 +69,6 @@ export default function PortfolioMotion({ children }: PortfolioMotionProps) {
             },
           },
         );
-
-        gsap.to(element, {
-          opacity: 0.38,
-          filter: "brightness(0.72)",
-          ease: "none",
-          scrollTrigger: {
-            trigger: element,
-            start: "bottom 70%",
-            end: "bottom 22%",
-            scrub: 1,
-          },
-        });
       });
     },
     { scope },

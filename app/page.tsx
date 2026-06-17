@@ -7,36 +7,48 @@ import PortfolioMotion from "./components/PortfolioMotion";
 export const metadata: Metadata = {
   title: "Samuel Razumovskiy | Product Builder",
   description:
-    "Samuel Razumovskiy builds production web, mobile, and AI-assisted products across BracketIQ, ProQuote, Kotlin Multiplatform, Next.js, and .NET.",
+    "Samuel Razumovskiy builds BracketIQ across mvp-site and mvp-app, combining Next.js, Prisma, Stripe, Kotlin Multiplatform, and Compose Multiplatform.",
 };
 
 const craftItems = [
+  "Next.js App Router",
+  "Mantine UI",
+  "Prisma",
+  "Postgres",
+  "Stripe",
   "Kotlin Multiplatform",
   "Compose Multiplatform",
-  "Next.js",
-  "React",
-  "C# and .NET",
-  "Stripe",
-  "Appwrite",
-  "CI/CD",
+  "Ktor client",
 ];
 
 const accordionItems = [
   {
-    title: "Event operations",
-    copy: "Registration, schedules, brackets, teams, and payments for sports organizers.",
+    title: "Organization operations",
+    copy: "Facilities manage public pages, users, staff roles, fields, finance settings, and payments in mvp-site.",
     image: "/images/projects/org_home_web.png",
   },
   {
-    title: "Mobile parity",
-    copy: "Shared logic with native-feeling Android and iOS surfaces for participants.",
-    image: "/images/projects/discover_screen_mobile.png",
+    title: "Schedules and brackets",
+    copy: "Event pages cover leagues, tournaments, matches, divisions, scoring, standings, and field assignments.",
+    image: "/images/projects/schedule_mobile.png",
   },
   {
-    title: "Quote workflows",
-    copy: "Structured intake and fast estimate paths for contractors and field teams.",
-    image: "/images/profile/profile.jpg",
+    title: "Mobile companion",
+    copy: "mvp-app brings search, event detail, teams, profile schedule, match detail, and chat flows into Kotlin Multiplatform.",
+    image: "/images/projects/discover_screen_mobile.png",
   },
+];
+
+const webHighlights = [
+  "Organization dashboards, public organization pages, staff roles, fields, finance settings, files, and documents.",
+  "Event registration, league and tournament scheduling, bracket views, calendar views, scoring, divisions, and team compliance.",
+  "Participant paths for discovery, teams, my schedule, public embeds, and payment-backed products or subscriptions.",
+];
+
+const mobileHighlights = [
+  "Shared Compose Multiplatform code in mvp-app with Android and iOS targets.",
+  "Mobile screens for event search, event detail, event create, organization detail, team management, match detail, chat, and profile schedule.",
+  "Repository layer for events, teams, fields, billing, matches, users, images, sports, push notifications, and app updates.",
 ];
 
 function Marquee() {
@@ -87,8 +99,8 @@ export default function PersonalWebsite() {
                   </span>
                 </h1>
                 <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-                  Recent work spans BracketIQ, ProQuote, Kotlin Multiplatform,
-                  Next.js, and practical workflows that survive real users.
+                  Recent work is centered on BracketIQ: a Next.js web platform in
+                  mvp-site and a Kotlin Multiplatform mobile app in mvp-app.
                 </p>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <a
@@ -116,7 +128,7 @@ export default function PersonalWebsite() {
                     width={720}
                     height={900}
                     priority
-                    className="aspect-[4/5] w-full rounded-[1.45rem] object-cover grayscale transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                    className="aspect-[4/5] w-full rounded-[1.45rem] object-cover transition duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
               </div>
@@ -129,11 +141,12 @@ export default function PersonalWebsite() {
             <div className="mx-auto max-w-7xl">
               <div className="max-w-3xl">
                 <h2 className="text-4xl font-semibold leading-tight text-zinc-950 dark:text-white md:text-6xl">
-                  Selected products with real distribution paths.
+                  BracketIQ across web and mobile.
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-                  The work is strongest where product design, architecture, payments,
-                  and mobile delivery meet.
+                  The portfolio focuses on the actual BracketIQ repos: mvp-site for
+                  facility and event operations, and mvp-app for participant mobile
+                  workflows.
                 </p>
               </div>
 
@@ -152,9 +165,20 @@ export default function PersonalWebsite() {
                   <div className="mt-6">
                     <h3 className="text-2xl font-semibold">BracketIQ Web</h3>
                     <p className="mt-3 text-base leading-7 text-zinc-700 dark:text-zinc-300">
-                      Tournament and league management for events, teams, schedules,
-                      brackets, rentals, and payments.
+                      mvp-site is the web platform for facilities, clubs, and event
+                      organizers running multi-sport operations.
                     </p>
+                    <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                      {webHighlights.map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lime-300"
+                          />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                       <a
                         href="https://bracket-iq.com"
@@ -177,7 +201,7 @@ export default function PersonalWebsite() {
                 </article>
 
                 <article className="group motion-image overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-[#e9f2d8] p-5 dark:border-white/10 dark:bg-lime-950/30 lg:col-span-3">
-                  <div className="grid gap-5 sm:grid-cols-[0.9fr_1.1fr] sm:items-center">
+                  <div className="grid gap-5 sm:grid-cols-[0.78fr_1.22fr] sm:items-center">
                     <div className="grid grid-cols-2 gap-3">
                       <div className="overflow-hidden rounded-[1rem] bg-white p-2 dark:bg-zinc-900">
                         <Image
@@ -201,9 +225,20 @@ export default function PersonalWebsite() {
                     <div>
                       <h3 className="text-2xl font-semibold">BracketIQ Mobile</h3>
                       <p className="mt-3 text-base leading-7 text-zinc-700 dark:text-zinc-300">
-                        Kotlin Multiplatform app with shared logic and native store
-                        distribution for Android and iOS.
+                        mvp-app is the Kotlin Multiplatform companion for BracketIQ,
+                        sharing Compose Multiplatform code across Android and iOS.
                       </p>
+                      <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                        {mobileHighlights.map((item) => (
+                          <li key={item} className="flex gap-3">
+                            <span
+                              aria-hidden="true"
+                              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-950 dark:bg-lime-300"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                       <div className="mt-5 flex flex-wrap gap-3">
                         <a
                           href="https://github.com/camka14/mvp-app"
@@ -233,25 +268,19 @@ export default function PersonalWebsite() {
                 </article>
 
                 <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-zinc-950 p-6 text-white dark:border-white/10 lg:col-span-2">
-                  <h3 className="text-2xl font-semibold">ProQuote</h3>
+                  <h3 className="text-2xl font-semibold">mvp-site</h3>
                   <p className="mt-3 text-base leading-7 text-zinc-300">
-                    AI-assisted estimating for contractors, from intake to clear
-                    quote output.
+                    Next.js App Router app with Mantine UI, Prisma, Postgres,
+                    Stripe, file routes, organization pages, public embeds, and
+                    event scheduling surfaces.
                   </p>
-                  <a
-                    href="https://pro-quote.razumly.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-lime-300 px-5 text-sm font-semibold text-zinc-950 transition hover:bg-lime-200 active:translate-y-px"
-                  >
-                    Visit ProQuote
-                  </a>
                 </article>
 
                 <article className="motion-image rounded-[1.5rem] border border-zinc-950/10 bg-white p-6 dark:border-white/10 dark:bg-white/10 lg:col-span-1">
-                  <h3 className="text-2xl font-semibold">Stack</h3>
+                  <h3 className="text-2xl font-semibold">mvp-app</h3>
                   <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-                    Web, mobile, backend, payments, and release pipelines.
+                    KMP project with shared composeApp code, Android target, iOS
+                    framework targets, and an iosApp entry point.
                   </p>
                 </article>
               </div>
@@ -261,7 +290,7 @@ export default function PersonalWebsite() {
           <section className="px-5 py-24 sm:px-8 md:py-32">
             <div className="mx-auto max-w-7xl">
               <h2 className="max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
-                Product work across the full path.
+                Product work across BracketIQ&apos;s full path.
               </h2>
               <div className="mt-10 flex flex-col overflow-hidden rounded-[1.5rem] border border-zinc-950/10 bg-white dark:border-white/10 dark:bg-white/10 md:h-[28rem] md:flex-row">
                 {accordionItems.map((item) => (
@@ -298,7 +327,7 @@ export default function PersonalWebsite() {
               </div>
               <div className="space-y-8">
                 <p className="scrub-copy text-2xl leading-10 text-zinc-700 dark:text-zinc-300">
-                  {"I build full-stack and cross-platform products with reliable user flows, mobile-first execution, maintainable architecture, and enough product judgment to keep the interface honest."
+                  {"I build the web and mobile pieces around real BracketIQ workflows: organization operations, event creation, schedules, brackets, scoring, teams, payments, documents, and participant mobile screens."
                     .split(" ")
                     .map((word, index) => (
                       <span data-scrub-word key={`${word}-${index}`} className="inline-block pr-2">
